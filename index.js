@@ -251,3 +251,5 @@ document.getElementById("txtTinhTienCap").onclick = function () {
     "ketQuaTienCap"
   ).innerHTML = `Mã khách hàng: ${maKH}; Tiền cáp: ${traKQTien}`;
 };
+
+
