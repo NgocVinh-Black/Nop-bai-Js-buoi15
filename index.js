@@ -193,6 +193,7 @@ document.getElementById("txtTinhTienThue").onclick = function () {
 };
 
 //Bài tập tính tiền cáp
+//Ẩn hiện sô kết nối
 function chonLoaiKhachHang() {
   var chonKhachHang = document.getElementById("txtChonLoaiKhachHang").value;
   var demoAnHien = document.getElementById("demoAH");
@@ -202,6 +203,7 @@ function chonLoaiKhachHang() {
     demoAnHien.style.display = "none";
   }
 }
+//tính giá nhà dânyy
 function loaiNhaDan() {
   var kenhCaoCap = document.getElementById("txtSoKenhCaoCap").value * 1;
   var phiHoaDon = 4.5;
@@ -215,6 +217,7 @@ function loaiNhaDan() {
     alert("Nhập lại dữ liệu");
   }
 }
+//tính giá doanh nghiệp
 function loaiDoanhNghiep() {
   var kenhCaoCap = document.getElementById("txtSoKenhCaoCap").value * 1;
   var soKetNoi = document.getElementById("txtSoKetNoi").value * 1;
@@ -227,13 +230,17 @@ function loaiDoanhNghiep() {
       tienCapDoanhNghiep = phiHoaDon + phiDichVu + thueKenhCaoCap * kenhCaoCap;
       return tienCapDoanhNghiep;
     } else {
-      tienCapDoanhNghiep = phiHoaDon + (phiDichVu + (5 * (soKetNoi - 10))) + thueKenhCaoCap * kenhCaoCap;
+      tienCapDoanhNghiep =
+        phiHoaDon +
+        (phiDichVu + 5 * (soKetNoi - 10)) +
+        thueKenhCaoCap * kenhCaoCap;
       return tienCapDoanhNghiep;
     }
   } else {
     alert("Nhập lại dữ liệu");
   }
 }
+//Bấm nút tính giá tiền
 document.getElementById("txtTinhTienCap").onclick = function () {
   var chonKhachHang = document.getElementById("txtChonLoaiKhachHang").value;
   var tienNhaDan = loaiNhaDan();
@@ -251,5 +258,3 @@ document.getElementById("txtTinhTienCap").onclick = function () {
     "ketQuaTienCap"
   ).innerHTML = `Mã khách hàng: ${maKH}; Tiền cáp: ${traKQTien}`;
 };
-
-
