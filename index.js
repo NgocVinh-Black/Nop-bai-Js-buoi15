@@ -124,44 +124,44 @@ function thuNhapChiuThue1Nam() {
   var tongThuNhap1Nam = document.getElementById("txtTongThuNhap").value * 1;
   var tong = 0;
   if (tongThuNhap1Nam > 0) {
-    if (0 < tongThuNhap1Nam && tongThuNhap1Nam <= 60) {
+    if (0 < tongThuNhap1Nam && tongThuNhap1Nam <= 60000000) {
       tong = tongThuNhap1Nam * 0.05;
       return tong;
-    } else if (60 < tongThuNhap1Nam && tongThuNhap1Nam <= 120) {
-      tong = 60 * 0.05 + (tongThuNhap1Nam - 60) * 0.1;
+    } else if (60000000 < tongThuNhap1Nam && tongThuNhap1Nam <= 120000000) {
+      tong = 60000000 * 0.05 + (tongThuNhap1Nam - 60000000) * 0.1;
       return tong;
-    } else if (120 < tongThuNhap1Nam && tongThuNhap1Nam <= 210) {
-      tong = 60 * 0.05 + 60 * 0.1 + (tongThuNhap1Nam - 120) * 0.15;
+    } else if (120000000 < tongThuNhap1Nam && tongThuNhap1Nam <= 210000000) {
+      tong = 60000000 * 0.05 + 60000000 * 0.1 + (tongThuNhap1Nam - 120000000) * 0.15;
       return tong;
-    } else if (210 < tongThuNhap1Nam && tongThuNhap1Nam <= 384) {
-      tong = 60 * 0.05 + 60 * 0.1 + 90 * 0.15 + (tongThuNhap1Nam - 210) * 0.2;
+    } else if (210000000 < tongThuNhap1Nam && tongThuNhap1Nam <= 384000000) {
+      tong = 60000000 * 0.05 + 60000000 * 0.1 + 90000000 * 0.15 + (tongThuNhap1Nam - 210000000) * 0.2;
       return tong;
-    } else if (384 < tongThuNhap1Nam && tongThuNhap1Nam <= 624) {
+    } else if (384000000 < tongThuNhap1Nam && tongThuNhap1Nam <= 624000000) {
       tong =
-        60 * 0.05 +
-        60 * 0.1 +
-        90 * 0.15 +
-        174 * 0.2 +
-        (tongThuNhap1Nam - 384) * 0.25;
+        60000000 * 0.05 +
+        60000000 * 0.1 +
+        90000000 * 0.15 +
+        174000000 * 0.2 +
+        (tongThuNhap1Nam - 384000000) * 0.25;
       return tong;
-    } else if (624 < tongThuNhap1Nam && tongThuNhap1Nam <= 960) {
+    } else if (624000000 < tongThuNhap1Nam && tongThuNhap1Nam <= 960000000) {
       tong =
-        60 * 0.05 +
-        60 * 0.1 +
-        90 * 0.15 +
-        174 * 0.2 +
-        240 * 0.25 +
-        (tongThuNhap1Nam - 624) * 0.3;
+        60000000 * 0.05 +
+        60000000 * 0.1 +
+        90000000 * 0.15 +
+        174000000 * 0.2 +
+        240000000 * 0.25 +
+        (tongThuNhap1Nam - 624000000) * 0.3;
       return tong;
     } else {
       tong =
-        60 * 0.05 +
-        60 * 0.1 +
-        90 * 0.15 +
-        174 * 0.2 +
-        240 * 0.25 +
-        336 * 0.3 +
-        (tongThuNhap1Nam - 960) * 0.35;
+        60000000 * 0.05 +
+        60000000 * 0.1 +
+        90000000 * 0.15 +
+        174000000 * 0.2 +
+        240000000 * 0.25 +
+        336000000 * 0.3 +
+        (tongThuNhap1Nam - 960000000) * 0.35;
       return tong;
     }
   } else {
@@ -172,7 +172,7 @@ function thuNhapChiuThue1Nam() {
 function soNguoiPhuThuoc() {
   var sNPT = document.getElementById("txtSoNguoiPhuThuoc").value * 1;
   var tienNPT = 0;
-  tienNPT = sNPT * 1.6;
+  tienNPT = sNPT * 1600000;
   return tienNPT;
 }
 //Thu nhập chịu thuế = Tổng thu nhập năm - 4tr - Số người phụ thuộc * 1.6tr
@@ -180,7 +180,7 @@ document.getElementById("txtTinhTienThue").onclick = function () {
   var nhapHoTenTT = document.getElementById("txtNhapHoTenTinhThue").value;
   var TTCT = thuNhapChiuThue1Nam();
   var sNPT = soNguoiPhuThuoc();
-  var tienThueThuNhapCaNhan = TTCT - 4 - sNPT;
+  var tienThueThuNhapCaNhan = TTCT - 4000000 - sNPT;
   document.getElementById(
     "ketQuaTienThue"
   ).innerHTML = `Họ tên: ${nhapHoTenTT}; Tiền thuế thu nhập cá nhân: ${tienThueThuNhapCaNhan.toLocaleString(
